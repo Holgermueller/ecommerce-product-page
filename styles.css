@@ -18,16 +18,45 @@ header {
   display: flex;
   flex-direction: row;
   align-items: center;
+  padding: 16px;
+}
+
+.open-close-nav {
+  border: none;
+  background-color: transparent;
+}
+
+.company-logo {
+  justify-self: left;
+  margin-left: 12px;
+}
+
+.hidden-text {
+  height: 1px;
+  width: 1px;
+  position: absolute;
+  color: transparent;
 }
 
 .desktop-nav {
   display: none;
 }
 
-.quantity-selector,
-.add-to-cart {
-  width: 90%;
-  margin: auto;
+.shopping-cart {
+  margin-left: auto;
+}
+
+.avatar {
+  height: 30px;
+  width: 30px;
+  margin: 0 12px;
+}
+
+.item-description-container {
+  padding: 32px;
+}
+
+.quantity-selector {
   display: flex;
   align-items: center;
   justify-content: center;
