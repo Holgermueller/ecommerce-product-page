@@ -1,44 +1,117 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | E-commerce product page</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="styles.css" />
 
-  Collections
-  Men
-  Women
-  About
-  Contact
+    <title>Frontend Mentor | E-commerce product page</title>
+  </head>
+  <body>
+    <nav id="mobileNav" class="mobile-nav">
+      <a href="#" aria-label="close mobile navigation" id="closeNav"
+        ><img src="images/icon-close.svg" alt="Close navigation icon"
+      /></a>
 
-  Sneaker Company
+      <ul>
+        <li><a href="#" aria-label="Collection">Collection</a></li>
+        <li><a href="#" aria-label="Men">Men</a></li>
+        <li><a href="#" aria-label="Women">Women</a></li>
+        <li><a href="#" aria-label="About">About</a></li>
+        <li><a href="#" aria-label="Contact">Contact</a></li>
+      </ul>
+    </nav>
 
-  Fall Limited Edition Sneakers
+    <header id="desktop-header">
+      <a href="#" aria-label="open mobile navigation" id="openNav"
+        ><img src="images/icon-menu.svg" alt="Open mobile navigation icon"
+      /></a>
+      <a href="#" aria-label="Home link"
+        ><img src="images/logo.svg" alt="company logo"
+      /></a>
 
-  These low-profile sneakers are your perfect casual wear companion. Featuring a 
-  durable rubber outer sole, they’ll withstand everything the weather can offer.
+      <nav class="desktop-nav">
+        <ul>
+          <li><a href="#" aria-label="Collection">Collection</a></li>
+          <li><a href="#" aria-label="Men">Men</a></li>
+          <li><a href="#" aria-label="Women">Women</a></li>
+          <li><a href="#" aria-label="About">About</a></li>
+          <li><a href="#" aria-label="Contact">Contact</a></li>
+        </ul>
+      </nav>
 
-  $125.00
-  50%
-  $250.00
+      <a href="#"
+        ><img
+          src="images/icon-cart.svg"
+          alt="
+        shopping cart icon"
+      /></a>
 
-  0
-  Add to cart
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+      <a href="#"
+        ><img
+          src="images/image-avatar.png"
+          alt="
+        User avatar"
+      /></a>
+    </header>
+
+    <main></main>
+
+    Sneaker Company Fall Limited Edition Sneakers
+
+    <p>
+      These low-profile sneakers are your perfect casual wear companion.
+      Featuring a durable rubber outer sole, they’ll withstand everything the
+      weather can offer.
+    </p>
+
+    <div class="prices">
+      <p class="sale-price">$125.00</p>
+      <p class="sale-percent">50%</p>
+      <p class="retail-price">$250.00</p>
+    </div>
+
+    <div
+      class="quantity-selector"
+      role="Use these buttons to increase or decrease the quantity of the item to add to cart"
+    >
+      <button class="plus-minus minus" id="minus">
+        <img src="images/icon-minus.svg" alt="Minus icons" />
+      </button>
+      <p class="quantity">0</p>
+      <button class="plus-minus plus" id="plus">
+        <img src="images/icon-plus.svg" alt="Plus icons" />
+      </button>
+    </div>
+
+    <button class="add-to-cart">
+      <img src="images/icon-cart.svg" alt="shopping cart icon" />
+      Add to cart
+    </button>
+
+    <footer class="attribution">
+      <p>
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by <a href="#" target="_blank">Holger Mueller</a>.
+      </p>
+    </footer>
+  </body>
 </html>
