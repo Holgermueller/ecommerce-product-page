@@ -20,11 +20,17 @@ const closeCart = () => {
 };
 
 const decrementQuantity = () => {
-  console.log("click");
+  if (quantity > 0) {
+    quantity--;
+    document.getElementById("quantity").innerHTML = quantity;
+  }
 };
 
 const incrementQuantity = () => {
-  console.log("click");
+  quantity++;
+
+  document.getElementById("quantity").innerHTML = quantity;
+  return quantity;
 };
 
 const addToCart = () => {
@@ -32,10 +38,22 @@ const addToCart = () => {
 };
 
 const displayQuantityOnIcon = () => {
-  document.getElementById("cartQuantityDisplay").innerHTML = quantity;
-  document.getElementById("cartQuantityDisplay").style.backgroundColor =
-    "hsl(26, 100%, 55%)";
-  document.getElementById("cartQuantityDisplay").style.position = "absolute";
+  if (quantity < 1) {
+    document.getElementById("cartQuantityDisplay").style.display = "none";
+    document.getElementById("quantity").innerHTML = 0;
+  } else {
+    document.getElementById("cartQuantityDisplay").innerHTML = quantity;
+    document.getElementById("cartQuantityDisplay").style.backgroundColor =
+      "hsl(26, 100%, 55%)";
+    document.getElementById("cartQuantityDisplay").style.borderRadius = "50%";
+    document.getElementById("cartQuantityDisplay").style.padding = "1px 8px";
+    document.getElementById("cartQuantityDisplay").style.zIndex = "2";
+    document.getElementById("cartQuantityDisplay").style.translate =
+      "-60px -10px";
+    document.getElementById("cartQuantityDisplay").style.fontSize = ".75rem";
+    document.getElementById("cartQuantityDisplay").style.right = "0";
+    document.getElementById("cartQuantityDisplay").style.position = "absolute";
+  }
 };
 
 const plusSlides = (n) => {
