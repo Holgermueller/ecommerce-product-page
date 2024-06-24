@@ -69,12 +69,20 @@
         </ul>
       </nav>
 
-      <a href="#" aria-label="shopping cart" class="shopping-cart"
-        ><img
+      <button
+        href="#"
+        aria-label="shopping cart"
+        class="shopping-cart"
+        onclick="openCart()"
+        id="shoppingCartIcon"
+      >
+        <img
           src="images/icon-cart.svg"
           alt="
         shopping cart icon"
-      /></a>
+        />
+      </button>
+      <span id="cartQuantityDisplay"></span>
 
       <a href="#" aria-label="customer profile" class="avatar"
         ><img
@@ -92,7 +100,41 @@
         class="mobile-image-carousel"
         id="mobileImageCarousel"
       >
-        <img src="images/image-product-1.jpg" alt="product image one" />
+        <div class="my-slides">
+          <img
+            class=""
+            id=""
+            src="images/image-product-1.jpg"
+            alt="product image one"
+          />
+        </div>
+        <div class="my-slides">
+          <img
+            class=""
+            id=""
+            src="images/image-product-2.jpg"
+            alt="product image two"
+          />
+        </div>
+        <div class="my-slides">
+          <img
+            class=""
+            id=""
+            src="images/image-product-3.jpg"
+            alt="product image three"
+          />
+        </div>
+        <div class="my-slides">
+          <img
+            class=""
+            id=""
+            src="images/image-product-4.jpg"
+            alt="product image four"
+          />
+        </div>
+
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
       </div>
 
       <div
@@ -130,16 +172,24 @@
           class="quantity-selector"
           role="Use these buttons to increase or decrease the quantity of the item to add to cart"
         >
-          <button class="plus-minus minus" id="minus">
+          <button
+            class="plus-minus minus"
+            id="minus"
+            onclick="decrementQuantity()"
+          >
             <img src="images/icon-minus.svg" alt="Minus icons" />
           </button>
           <p class="quantity">0</p>
-          <button class="plus-minus plus" id="plus">
+          <button
+            class="plus-minus plus"
+            id="plus"
+            onclick="incrementQuantity()"
+          >
             <img src="images/icon-plus.svg" alt="Plus icons" />
           </button>
         </div>
 
-        <button class="add-to-cart">
+        <button class="add-to-cart" onclick="addToCart()" id="addToCart">
           <img
             class="button-cart-icon"
             src="images/icon-cart.svg"
@@ -147,6 +197,12 @@
           />
           Add to cart
         </button>
+      </section>
+
+      <section class="shopping-cart" id="shopingCart">
+        <h2>Cart</h2>
+
+        <button>Check Out</button>
       </section>
     </main>
 
