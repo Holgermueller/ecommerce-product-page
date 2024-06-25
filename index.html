@@ -81,8 +81,15 @@
           alt="
         shopping cart icon"
         />
+
+        <div class="item-name-and-totals">
+          <p class="item-name"></p>
+          <p class="totals"></p>
+        </div>
       </button>
-      <span id="cartQuantityDisplay"></span>
+      <span id="cartQuantityDisplay">
+        <p></p>
+      </span>
 
       <a href="#" aria-label="customer profile" class="avatar"
         ><img
@@ -94,6 +101,34 @@
     </header>
 
     <main>
+      <section class="shopping-cart-modal" id="shopingCart">
+        <h2>Cart</h2>
+
+        <div class="image-and-prices">
+          <img
+            class="cart-thumbnail"
+            src="images/image-product-1-thumbnail.jpg"
+            alt="thumbnail image of product"
+          />
+
+          <div class="price-and-name-display">
+            <p class="modalItemName">Fall Limited Edition Sneakers</p>
+            <p class="totals">$125.00 x 3 <span> $375.00</span></p>
+          </div>
+
+          <button class="delete">
+            <img
+              src="images/icon-delete.svg"
+              alt="Trash can icon to delete item from cart"
+            />
+          </button>
+        </div>
+
+        <button class="checkout" id="checkout" onclick="checkout()">
+          Check Out
+        </button>
+      </section>
+
       <div
         role="image-carosel"
         aria-label="mobile-image-carosel"
@@ -154,7 +189,7 @@
       <section class="item-description-container">
         <h1>Sneaker Company</h1>
 
-        <h2>Fall Limited Edition Sneakers</h2>
+        <h2 id="itemNameDisplay"></h2>
 
         <p class="product-description">
           These low-profile sneakers are your perfect casual wear companion.
@@ -163,7 +198,7 @@
         </p>
 
         <div class="prices">
-          <p class="sale-price">$125.00</p>
+          <p class="sale-price" id="salePrice"></p>
           <p class="sale-percent">50%</p>
           <p class="retail-price">$250.00</p>
         </div>
@@ -197,12 +232,6 @@
           />
           Add to cart
         </button>
-      </section>
-
-      <section class="shopping-cart" id="shopingCart">
-        <h2>Cart</h2>
-
-        <button>Check Out</button>
       </section>
     </main>
 
