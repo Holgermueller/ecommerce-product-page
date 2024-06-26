@@ -241,6 +241,39 @@ h2 {
   left: 2.5%;
 }
 
+.open-animation {
+  display: block;
+  animation-name: open-modal;
+  animation-duration: 0.4s;
+}
+
+@keyframes open-modal {
+  from {
+    width: 0;
+    opacity: 0;
+  }
+  to {
+    width: 100%;
+    opacity: 1;
+  }
+}
+
+.close-animation {
+  animation-name: close-modal;
+  animation-duration: 0.4s;
+}
+
+@keyframes close-modal {
+  from {
+    width: 95%;
+    opacity: 1;
+  }
+  to {
+    width: 0;
+    opacity: 0;
+  }
+}
+
 .shopping-cart-modal h2 {
   margin-left: 32px;
   margin-top: 0;

@@ -15,11 +15,10 @@ const closeNav = () => {
 };
 
 const openAndCloseCart = () => {
-  let cart = document.getElementById("shopingCart");
-  if (cart.style.display == "block") {
-    cart.style.display = "none";
-  } else {
-    cart.style.display = "block";
+  console.log("click");
+  let cart = document.getElementById("shoppingCart");
+  if (cart.style.display == "none") {
+    cart.classList.add("open-animation");
   }
 };
 
@@ -33,9 +32,7 @@ const decrementQuantity = () => {
 
 const incrementQuantity = () => {
   quantity++;
-
   document.getElementById("quantity").innerHTML = quantity;
-
   return quantity;
 };
 
@@ -59,8 +56,10 @@ const displayQuantityOnIcon = () => {
 };
 
 const addToCart = () => {
-  displayQuantityOnIcon();
-  console.log(quantity + " added to cart");
+  if (quantity > 0) {
+    displayQuantityOnIcon();
+    console.log(quantity + " added to cart");
+  }
 };
 
 const checkout = () => {
