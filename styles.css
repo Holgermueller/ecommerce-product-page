@@ -281,6 +281,19 @@ h2 {
   margin: 5%;
 }
 
+#itemsInCart {
+  display: none;
+}
+
+#emptyCartMessage {
+  text-align: center;
+}
+
+#emptyCartMessage p {
+  margin: 5rem auto;
+  color: hsl(219, 9%, 45%);
+}
+
 .attribution {
   font-size: 11px;
   text-align: center;

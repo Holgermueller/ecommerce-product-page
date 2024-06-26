@@ -104,29 +104,35 @@
       <section class="shopping-cart-modal" id="shopingCart">
         <h2>Cart</h2>
 
-        <div class="image-and-prices">
-          <img
-            class="cart-thumbnail"
-            src="images/image-product-1-thumbnail.jpg"
-            alt="thumbnail image of product"
-          />
+        <div id="itemsInCart">
+          <div class="image-and-prices">
+            <img
+              class="cart-thumbnail"
+              src="images/image-product-1-thumbnail.jpg"
+              alt="thumbnail image of product"
+            />
 
-          <div class="price-and-name-display">
-            <p class="modalItemName">Fall Limited Edition Sneakers</p>
-            <p class="totals">$125.00 x 3 <span> $375.00</span></p>
+            <div class="price-and-name-display">
+              <p class="modalItemName">Fall Limited Edition Sneakers</p>
+              <p class="totals">$125.00 x 3 <span> $375.00</span></p>
+            </div>
+
+            <button class="delete">
+              <img
+                src="images/icon-delete.svg"
+                alt="Trash can icon to delete item from cart"
+              />
+            </button>
           </div>
 
-          <button class="delete">
-            <img
-              src="images/icon-delete.svg"
-              alt="Trash can icon to delete item from cart"
-            />
+          <button class="checkout" id="checkout" onclick="checkout()">
+            Check Out
           </button>
         </div>
 
-        <button class="checkout" id="checkout" onclick="checkout()">
-          Check Out
-        </button>
+        <div id="emptyCartMessage">
+          <p>Your cart is empty</p>
+        </div>
       </section>
 
       <div
