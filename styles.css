@@ -231,6 +231,7 @@ h2 {
 }
 
 .shopping-cart-modal {
+  display: none;
   position: fixed;
   z-index: 3;
   border-radius: 10px;

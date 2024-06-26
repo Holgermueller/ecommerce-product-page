@@ -14,12 +14,13 @@ const closeNav = () => {
   document.getElementById("mobileNav").style.width = "0";
 };
 
-const openCart = () => {
-  console.log("click");
-};
-
-const closeCart = () => {
-  console.log("click");
+const openAndCloseCart = () => {
+  let cart = document.getElementById("shopingCart");
+  if (cart.style.display == "block") {
+    cart.style.display = "none";
+  } else {
+    cart.style.display = "block";
+  }
 };
 
 const decrementQuantity = () => {
