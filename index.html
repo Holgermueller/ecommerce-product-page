@@ -117,10 +117,12 @@
 
             <div class="price-and-name-display">
               <p class="modalItemName">Fall Limited Edition Sneakers</p>
-              <p class="totals">$125.00 x 3 <span> $375.00</span></p>
+              <p id="totalsCalculating" class="totals">
+                <span id="total"></span>
+              </p>
             </div>
 
-            <button class="delete">
+            <button onclick="emptyItemsFromCart()" class="delete">
               <img
                 src="images/icon-delete.svg"
                 alt="Trash can icon to delete item from cart"

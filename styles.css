@@ -297,9 +297,9 @@ h2 {
   color: hsl(219, 9%, 45%);
 }
 
-.price-and-name-display p span {
+#total {
   color: hsl(0, 0%, 0%);
-  font-weight: bold;
+  font-weight: 700;
 }
 
 .delete {

@@ -14,15 +14,12 @@ const closeNav = () => {
 };
 
 const openCart = () => {
-  console.log("click");
   let cart = document.getElementById("shoppingCart");
-
   cart.classList.add("open-animation");
 };
 
 const closeCart = () => {
   let cart = document.getElementById("shoppingCart");
-
   cart.classList.remove("open-animation");
 };
 
@@ -31,7 +28,6 @@ const decrementQuantity = () => {
     quantity--;
     document.getElementById("quantity").innerHTML = quantity;
   }
-  console.log(quantity);
 };
 
 const incrementQuantity = () => {
@@ -63,15 +59,25 @@ const addToCart = () => {
   if (quantity > 0) {
     displayQuantityOnIcon();
     displayQuantitiesInCart();
-    console.log(quantity + " added to cart");
   }
 };
 
+const emptyItemsFromCart = () => {
+  console.log("click");
+  quantity = 0;
+  displayQuantityOnIcon();
+  displayQuantitiesInCart();
+};
+
 const displayQuantitiesInCart = () => {
-  console.log(quantity);
   if (quantity > 0) {
+    console.log(salePrice, quantity);
     document.getElementById("itemsInCart").style.display = "block";
     document.getElementById("emptyCartMessage").style.display = "none";
+    document.getElementById("totalsCalculating").innerHTML =
+      salePrice + " X " + quantity + "  ";
+
+    // document.getElementById("total").innerHTML = 125;
   } else {
     document.getElementById("itemsInCart").style.display = "none";
     document.getElementById("emptyCartMessage").style.display = "block";
