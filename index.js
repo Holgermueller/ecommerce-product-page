@@ -77,15 +77,14 @@ const displayQuantitiesInCart = () => {
     document.getElementById("totalsCalculating").innerHTML =
       salePrice + " X " + quantity + "  ";
 
-    // document.getElementById("total").innerHTML = 125;
+    let child = document.createElement("span");
+    child.innerHTML = " $" + 125 * parseInt(quantity) + ".00";
+
+    document.getElementById("totalsCalculating").append(child);
   } else {
     document.getElementById("itemsInCart").style.display = "none";
     document.getElementById("emptyCartMessage").style.display = "block";
   }
-};
-
-const calculateTotals = () => {
-  console.log("checkout");
 };
 
 const plusSlides = (n) => {

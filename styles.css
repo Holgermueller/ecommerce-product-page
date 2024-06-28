@@ -292,12 +292,12 @@ h2 {
   border-radius: 10px;
 }
 
-.price-and-name-display p {
+.totals {
   margin: 0;
   color: hsl(219, 9%, 45%);
 }
 
-#total {
+.totals span {
   color: hsl(0, 0%, 0%);
   font-weight: 700;
 }
