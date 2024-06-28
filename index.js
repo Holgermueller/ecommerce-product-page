@@ -3,7 +3,6 @@
 let slideIndex = 1;
 let quantity = 0;
 let itemName = "Fall Limited Edition Sneakers";
-let shoppingCart = 0;
 let salePrice = "$125.00";
 
 const openNav = () => {
@@ -14,12 +13,17 @@ const closeNav = () => {
   document.getElementById("mobileNav").style.width = "0";
 };
 
-const openAndCloseCart = () => {
+const openCart = () => {
   console.log("click");
   let cart = document.getElementById("shoppingCart");
-  if (cart.style.display == "none") {
-    cart.classList.add("open-animation");
-  }
+
+  cart.classList.add("open-animation");
+};
+
+const closeCart = () => {
+  let cart = document.getElementById("shoppingCart");
+
+  cart.classList.remove("open-animation");
 };
 
 const decrementQuantity = () => {
@@ -58,11 +62,23 @@ const displayQuantityOnIcon = () => {
 const addToCart = () => {
   if (quantity > 0) {
     displayQuantityOnIcon();
+    displayQuantitiesInCart();
     console.log(quantity + " added to cart");
   }
 };
 
-const checkout = () => {
+const displayQuantitiesInCart = () => {
+  console.log(quantity);
+  if (quantity > 0) {
+    document.getElementById("itemsInCart").style.display = "block";
+    document.getElementById("emptyCartMessage").style.display = "none";
+  } else {
+    document.getElementById("itemsInCart").style.display = "none";
+    document.getElementById("emptyCartMessage").style.display = "block";
+  }
+};
+
+const calculateTotals = () => {
   console.log("checkout");
 };
 
@@ -93,3 +109,4 @@ const loadData = () => {
 
 showSlides(slideIndex);
 loadData();
+displayQuantitiesInCart();

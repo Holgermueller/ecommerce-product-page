@@ -73,7 +73,7 @@
         href="#"
         aria-label="shopping cart"
         class="shopping-cart"
-        onclick="openAndCloseCart()"
+        onclick="openCart()"
         id="shoppingCartIcon"
       >
         <img
@@ -102,7 +102,10 @@
 
     <main>
       <section class="shopping-cart-modal" id="shoppingCart">
-        <h2>Cart</h2>
+        <div class="modal-header">
+          <h2>Cart</h2>
+          <button onclick="closeCart()">X</button>
+        </div>
 
         <div id="itemsInCart">
           <div class="image-and-prices">

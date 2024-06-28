@@ -241,6 +241,18 @@ h2 {
   left: 2.5%;
 }
 
+.modal-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.modal-header button {
+  background-color: transparent;
+  font-weight: bold;
+  margin-right: 5%;
+}
+
 .open-animation {
   display: block;
   animation-name: open-modal;
@@ -255,22 +267,6 @@ h2 {
   to {
     width: 100%;
     opacity: 1;
-  }
-}
-
-.close-animation {
-  animation-name: close-modal;
-  animation-duration: 0.4s;
-}
-
-@keyframes close-modal {
-  from {
-    width: 95%;
-    opacity: 1;
-  }
-  to {
-    width: 0;
-    opacity: 0;
   }
 }
 
