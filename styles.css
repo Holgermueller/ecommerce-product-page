@@ -92,6 +92,10 @@ header {
   margin: auto;
 }
 
+.desktop-thumbnail-display {
+  display: none;
+}
+
 .my-slides {
   display: none;
 }
@@ -333,8 +337,63 @@ h2 {
 }
 
 @media screen and (min-width: 600px) {
-  .prev:hover,
-  .next:hover {
-    background-color: hsla(0, 0%, 0%, 0.8);
+  button:hover {
+    cursor: pointer;
+  }
+
+  .my-slides img,
+  .thumbnail {
+    border-radius: 15px;
+  }
+
+  header,
+  main {
+    width: 80%;
+    margin: auto;
+  }
+
+  header {
+    justify-content: space-evenly;
+    border-bottom: 1px solid hsl(223, 64%, 98%);
+  }
+
+  main {
+    display: flex;
+    flex-direction: row;
+  }
+
+  main section {
+    width: 50%;
+  }
+
+  .open-close-nav {
+    display: none;
+  }
+
+  .desktop-nav {
+    display: block;
+    width: 100%;
+    margin-right: auto;
+  }
+
+  .desktop-nav a {
+    color: hsl(219, 9%, 45%);
+    margin-left: 5%;
+  }
+
+  .prev,
+  .next {
+    display: none;
+  }
+
+  .desktop-thumbnail-display {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 5%;
+  }
+
+  .thumbnail {
+    height: 75px;
+    width: 75px;
   }
 }

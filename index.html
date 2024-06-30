@@ -60,13 +60,11 @@
       </a>
 
       <nav class="desktop-nav">
-        <ul desktop-nav-links>
-          <li><a href="#" aria-label="Collection">Collection</a></li>
-          <li><a href="#" aria-label="Men">Men</a></li>
-          <li><a href="#" aria-label="Women">Women</a></li>
-          <li><a href="#" aria-label="About">About</a></li>
-          <li><a href="#" aria-label="Contact">Contact</a></li>
-        </ul>
+        <a href="#" aria-label="Collection">Collection</a>
+        <a href="#" aria-label="Men">Men</a>
+        <a href="#" aria-label="Women">Women</a>
+        <a href="#" aria-label="About">About</a>
+        <a href="#" aria-label="Contact">Contact</a>
       </nav>
 
       <button
@@ -100,45 +98,45 @@
       /></a>
     </header>
 
-    <main>
-      <section class="shopping-cart-modal" id="shoppingCart">
-        <div class="modal-header">
-          <h2>Cart</h2>
-          <button onclick="closeCart()">X</button>
-        </div>
+    <section class="shopping-cart-modal" id="shoppingCart">
+      <div class="modal-header">
+        <h2>Cart</h2>
+        <button onclick="closeCart()">X</button>
+      </div>
 
-        <div id="itemsInCart">
-          <div class="image-and-prices">
-            <img
-              class="cart-thumbnail"
-              src="images/image-product-1-thumbnail.jpg"
-              alt="thumbnail image of product"
-            />
+      <div id="itemsInCart">
+        <div class="image-and-prices">
+          <img
+            class="cart-thumbnail"
+            src="images/image-product-1-thumbnail.jpg"
+            alt="thumbnail image of product"
+          />
 
-            <div class="price-and-name-display">
-              <p class="modalItemName">Fall Limited Edition Sneakers</p>
-              <p id="totalsCalculating" class="totals">
-                <span id="total"></span>
-              </p>
-            </div>
-
-            <button onclick="emptyItemsFromCart()" class="delete">
-              <img
-                src="images/icon-delete.svg"
-                alt="Trash can icon to delete item from cart"
-              />
-            </button>
+          <div class="price-and-name-display">
+            <p class="modalItemName">Fall Limited Edition Sneakers</p>
+            <p id="totalsCalculating" class="totals">
+              <span id="total"></span>
+            </p>
           </div>
 
-          <button class="checkout" id="checkout">Check Out</button>
+          <button onclick="emptyItemsFromCart()" class="delete">
+            <img
+              src="images/icon-delete.svg"
+              alt="Trash can icon to delete item from cart"
+            />
+          </button>
         </div>
 
-        <div id="emptyCartMessage">
-          <p>Your cart is empty</p>
-        </div>
-      </section>
+        <button class="checkout" id="checkout">Check Out</button>
+      </div>
 
-      <div
+      <div id="emptyCartMessage">
+        <p>Your cart is empty</p>
+      </div>
+    </section>
+
+    <main>
+      <section
         role="image-carosel"
         aria-label="mobile-image-carosel"
         class="mobile-image-carousel"
@@ -146,32 +144,32 @@
       >
         <div class="my-slides">
           <img
-            class=""
-            id=""
+            class="product-image"
+            id="image1"
             src="images/image-product-1.jpg"
             alt="product image one"
           />
         </div>
         <div class="my-slides">
           <img
-            class=""
-            id=""
+            class="product-image"
+            id="image2"
             src="images/image-product-2.jpg"
             alt="product image two"
           />
         </div>
         <div class="my-slides">
           <img
-            class=""
-            id=""
+            class="product-image"
+            id="image3"
             src="images/image-product-3.jpg"
             alt="product image three"
           />
         </div>
         <div class="my-slides">
           <img
-            class=""
-            id=""
+            class="product-image"
+            id="image4"
             src="images/image-product-4.jpg"
             alt="product image four"
           />
@@ -179,21 +177,35 @@
 
         <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
         <a class="next" onclick="plusSlides(1)">&#10095;</a>
-      </div>
 
-      <div
-        role="image display for desktop"
-        aria-label="image display for desktop"
-        class="desktop-image-display"
-        id="desktopImageDisplay"
-      ></div>
-
-      <div
-        role="thumbnail display for desktop"
-        aria-label="thumbnail display for desktop"
-        class="desktop-thumbnail-display"
-        id="desktopThumbnailDisplay"
-      ></div>
+        <div
+          role="thumbnail display for desktop"
+          aria-label="thumbnail display for desktop"
+          class="desktop-thumbnail-display"
+          id="desktopThumbnailDisplay"
+        >
+          <img
+            src="images/image-product-1-thumbnail.jpg"
+            alt="image thumbnail"
+            class="thumbnail"
+          />
+          <img
+            src="images/image-product-2-thumbnail.jpg"
+            alt="image thumbnail"
+            class="thumbnail"
+          />
+          <img
+            src="images/image-product-3-thumbnail.jpg"
+            alt="image thumbnail"
+            class="thumbnail"
+          />
+          <img
+            src="images/image-product-4-thumbnail.jpg"
+            alt="image thumbnail"
+            class="thumbnail"
+          />
+        </div>
+      </section>
 
       <section class="item-description-container">
         <h1>Sneaker Company</h1>
