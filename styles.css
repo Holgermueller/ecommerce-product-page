@@ -337,6 +337,16 @@ h2 {
 }
 
 @media screen and (min-width: 600px) {
+  body,
+  html {
+    height: 100vh;
+    width: 100vw;
+  }
+
+  h2 {
+    font-size: 3rem;
+  }
+
   button:hover {
     cursor: pointer;
   }
@@ -360,10 +370,15 @@ h2 {
   main {
     display: flex;
     flex-direction: row;
+    height: 85%;
   }
 
   main section {
     width: 50%;
+  }
+
+  .mobile-image-carousel {
+    padding: 32px;
   }
 
   .open-close-nav {
@@ -381,19 +396,49 @@ h2 {
     margin-left: 5%;
   }
 
+  .my-slides img {
+    height: 400px;
+    width: 400px;
+  }
+
   .prev,
   .next {
     display: none;
   }
 
   .desktop-thumbnail-display {
+    width: 100%;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     padding-top: 5%;
   }
 
   .thumbnail {
-    height: 75px;
-    width: 75px;
+    height: 50px;
+    width: 50px;
+  }
+
+  .prices {
+    flex-wrap: wrap;
+  }
+
+  .retail-price {
+    flex-basis: 100%;
+  }
+
+  .quantity-selector {
+    width: 35%;
+    margin: 0;
+  }
+
+  .add-to-cart-tools {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .add-to-cart {
+    width: 60%;
+    float: right;
   }
 }

@@ -224,35 +224,37 @@
           <p class="retail-price">$250.00</p>
         </div>
 
-        <div
-          class="quantity-selector"
-          role="Use these buttons to increase or decrease the quantity of the item to add to cart"
-        >
-          <button
-            class="plus-minus minus"
-            id="minus"
-            onclick="decrementQuantity()"
+        <div class="add-to-cart-tools">
+          <div
+            class="quantity-selector"
+            role="Use these buttons to increase or decrease the quantity of the item to add to cart"
           >
-            <img src="images/icon-minus.svg" alt="Minus icons" />
-          </button>
-          <p id="quantity" class="quantity"></p>
-          <button
-            class="plus-minus plus"
-            id="plus"
-            onclick="incrementQuantity()"
-          >
-            <img src="images/icon-plus.svg" alt="Plus icons" />
+            <button
+              class="plus-minus minus"
+              id="minus"
+              onclick="decrementQuantity()"
+            >
+              <img src="images/icon-minus.svg" alt="Minus icons" />
+            </button>
+            <p id="quantity" class="quantity"></p>
+            <button
+              class="plus-minus plus"
+              id="plus"
+              onclick="incrementQuantity()"
+            >
+              <img src="images/icon-plus.svg" alt="Plus icons" />
+            </button>
+          </div>
+
+          <button class="add-to-cart" onclick="addToCart()" id="addToCart">
+            <img
+              class="button-cart-icon"
+              src="images/icon-cart.svg"
+              alt="shopping cart icon"
+            />
+            Add to cart
           </button>
         </div>
-
-        <button class="add-to-cart" onclick="addToCart()" id="addToCart">
-          <img
-            class="button-cart-icon"
-            src="images/icon-cart.svg"
-            alt="shopping cart icon"
-          />
-          Add to cart
-        </button>
       </section>
     </main>
 
